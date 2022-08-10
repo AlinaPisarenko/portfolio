@@ -18,10 +18,10 @@ body {
 
 .App {
   display: grid;
-  grid-template-rows: 6vh 94vh repeat(4, min-content);
-  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  grid-template-rows: 10vh 90vh repeat(4, max-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 26rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
 
-.heading-1, .heading-3 {
+.heading-1, .heading-2, .heading-3 {
   font-family: "Roboto", sans-serif;
   font-weight: 400; }
 
@@ -31,8 +31,15 @@ body {
   font-weight: 700;
   letter-spacing: 0.8rem; }
 
+.heading-2 {
+  color: rgba(255, 255, 255, 0.1);
+  font-size: 22rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.4rem; }
+
 .heading-3 {
-  color: rgba(255, 255, 255, 0.4);
+  color: rgba(255, 255, 255, 0.3);
   font-size: 2rem;
   line-height: 1; }
 
@@ -51,6 +58,9 @@ body {
     background-color: white;
     color: #000000; }
 
+.logo {
+  width: 5rem; }
+
 .navbar {
   grid-column: full-start/full-end;
   grid-row: 1/2;
@@ -59,11 +69,13 @@ body {
   display: grid;
   grid-template-columns: repeat(5, max-content);
   grid-gap: 1.6rem;
-  align-content: center; }
+  align-items: center; }
   .navbar__link {
-    color: white;
+    color: rgba(255, 255, 255, 0.3);
     text-decoration: none;
     font-size: 1.6rem; }
+    .navbar__link:active {
+      color: white; }
 
 .header {
   grid-column: full-start/full-end;
@@ -90,7 +102,13 @@ body {
 .about {
   grid-column: center-start/center-end;
   grid-row: 3/4;
-  background-color: #624; }
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(36rem, 1fr));
+  grid-gap: 3rem; }
+  .about__name {
+    grid-column: 1/-1; }
+  .about__text {
+    font-size: 1.4rem; }
 
 .projects {
   grid-column: center-start/center-end;

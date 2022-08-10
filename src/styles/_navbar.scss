@@ -7,11 +7,15 @@
   display: grid;
   grid-template-columns: repeat(5, max-content);
   grid-gap: 1.6rem;
-  align-content: center;
+  align-items: center;
 
   &__link {
-    color: $font-color-primary;
+    color: $font-color-light;
     text-decoration: none;
     font-size: 1.6rem;
+
+    &:active {
+      color: $font-color-primary;
+    }
   }
 }

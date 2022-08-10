@@ -1,6 +1,8 @@
 $color-primary: #000000;
 $font-color-primary: white;
 $font-color-secondary: #f65282;
+$font-color-light: rgba(255, 255, 255, 0.3);
+$font-color-dark: rgba(255, 255, 255, 0.1);
 
 $font-primary: 'Roboto', sans-serif;
 $font-secondary: 'Montserrat', sans-serif;
@@ -28,10 +30,10 @@ body {
 
 .App {
   display: grid;
-  grid-template-rows: 6vh 94vh repeat(4, min-content);
+  grid-template-rows: 10vh 90vh repeat(4, max-content);
   grid-template-columns:
     [full-start] minmax(6rem, 1fr)
-    [center-start] repeat(4, [col-start] minmax(min-content, 20rem) [col-end])
+    [center-start] repeat(4, [col-start] minmax(min-content, 26rem) [col-end])
     [center-end] minmax(6rem, 1fr)
     [full-end];
 }
