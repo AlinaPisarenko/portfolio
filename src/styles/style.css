@@ -15,3 +15,94 @@ body {
   color: white;
   font-weight: 300;
   line-height: 1.6; }
+
+.App {
+  display: grid;
+  grid-template-rows: 6vh 94vh repeat(4, min-content);
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(4, [col-start] minmax(min-content, 20rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+
+.heading-1, .heading-3 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 400; }
+
+.heading-1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.8rem; }
+
+.heading-3 {
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 2rem;
+  line-height: 1; }
+
+.btn {
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #000000;
+  padding: 18px 30px;
+  border: 1px solid white;
+  transition: all 0.4s ease-in-out; }
+  .btn:hover {
+    background-color: white;
+    color: #000000; }
+
+.navbar {
+  grid-column: full-start/full-end;
+  grid-row: 1/2;
+  z-index: 1;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  grid-gap: 1.6rem;
+  align-content: center; }
+  .navbar__link {
+    color: white;
+    text-decoration: none;
+    font-size: 1.6rem; }
+
+.header {
+  grid-column: full-start/full-end;
+  grid-row: 1/3;
+  background-image: url(../images/main-image1.png);
+  background-size: cover;
+  padding: 8rem;
+  padding-top: 4rem;
+  display: grid;
+  grid-template-rows: 1fr minmax(6rem, min-content) minmax(6rem, min-content) 1fr;
+  grid-template-columns: minmax(min-content, max-content);
+  grid-row-gap: 0.5rem;
+  justify-content: start; }
+  .header__greeting {
+    align-self: end; }
+  .header__name {
+    align-self: center; }
+  .header__btn-group {
+    display: grid;
+    grid-template-columns: 18rem 18rem;
+    grid-gap: 1rem;
+    align-items: start; }
+
+.about {
+  grid-column: center-start/center-end;
+  grid-row: 3/4;
+  background-color: #624; }
+
+.projects {
+  grid-column: center-start/center-end;
+  grid-row: 4/5;
+  background-color: #674; }
+
+.contact {
+  grid-column: center-start/center-end;
+  grid-row: 5/6;
+  background-color: #844; }
+
+.footer {
+  grid-column: center-start/center-end;
+  grid-row: 6/7;
+  background-color: #628; }

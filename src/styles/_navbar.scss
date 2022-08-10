@@ -1,0 +1,17 @@
+.navbar {
+  grid-column: full-start/full-end;
+  grid-row: 1/2;
+
+  z-index: 1;
+  padding-left: 1rem;
+  display: grid;
+  grid-template-columns: repeat(5, max-content);
+  grid-gap: 1.6rem;
+  align-content: center;
+
+  &__link {
+    color: $font-color-primary;
+    text-decoration: none;
+    font-size: 1.6rem;
+  }
+}

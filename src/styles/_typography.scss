@@ -1,0 +1,37 @@
+%heading {
+  font-family: $font-primary;
+  font-weight: 400;
+}
+
+.heading-1 {
+  @extend %heading;
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 0.8rem;
+}
+
+.heading-3 {
+  @extend %heading;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.btn {
+  color: $font-color-primary;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: $color-primary;
+  padding: 18px 30px;
+  border: 1px solid $font-color-primary;
+  transition: all 0.4s ease-in-out;
+
+  &:hover {
+    background-color: $font-color-primary;
+    color: $color-primary;
+  }
+}

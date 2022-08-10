@@ -25,3 +25,13 @@ body {
   font-weight: 300;
   line-height: 1.6;
 }
+
+.App {
+  display: grid;
+  grid-template-rows: 6vh 94vh repeat(4, min-content);
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr)
+    [center-start] repeat(4, [col-start] minmax(min-content, 20rem) [col-end])
+    [center-end] minmax(6rem, 1fr)
+    [full-end];
+}
